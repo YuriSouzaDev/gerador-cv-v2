@@ -5,7 +5,7 @@ import { ContextProvider } from './components/useContent/Context';
 function App() {
   return (
     <ContextProvider>
-      <div className="container-lg flex">
+      <div className="container-lg">
         <Sidenav />
         <Curriculum />
       </div>
