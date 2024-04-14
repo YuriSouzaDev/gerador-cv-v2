@@ -1,16 +1,13 @@
 import React from 'react';
-import Input from '../Input/Input';
 import Header from '../Header/Header';
+import FormPersonalInformations from '../Form/FormPersonalInformations';
 
 const Sidenav = () => {
   return (
     <div>
       <Header />
-      <form>
-        <div>
-          <Input label="Nome" id="inName" />
-          <Input label="Senha" id="inSenha" type="password" />
-        </div>
+      <form className="container border-2 mb-40 gap-20 form">
+        <FormPersonalInformations />
       </form>
     </div>
   );

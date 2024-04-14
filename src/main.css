@@ -13,6 +13,8 @@ html {
   --color-1-hover: #f7934c;
   --color-black: #000;
   --color-white: #f2f2f2;
+  --gap: 2rem;
+  --gap-20: 20px;
 }
 
 body {
@@ -53,6 +55,14 @@ h1 {
   color: var(--color-1);
 }
 
+.gap {
+  gap: var(--gap);
+}
+
+.gap-20 {
+  gap: var(--gap-20);
+}
+
 /* header */
 
 .container-btn {
@@ -72,4 +82,40 @@ h1 {
 
 .header-btn:hover {
   background: var(--color-1-hover);
+}
+
+/* form */
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px 20px;
+}
+
+.form > div {
+  width: 100%;
+}
+
+/* input */
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type='text'] {
+  display: block;
+  width: 100%;
+}
+
+/* responsive */
+
+@media (max-width: 1000px) {
+  .container-lg {
+    padding: 40px;
+  }
+
+  .form {
+    grid-template-columns: 1fr;
+  }
 }

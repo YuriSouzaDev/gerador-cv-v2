@@ -1,8 +1,8 @@
 import React, { Children } from 'react';
 
 type IContext = {
-  dark: boolean;
-  setDark: React.Dispatch<React.SetStateAction<boolean>>;
+  nome: string;
+  setNome: React.Dispatch<React.SetStateAction<string>>;
 };
 
 const Context = React.createContext<IContext | null>(null);
@@ -15,9 +15,9 @@ export const useInput = () => {
 };
 
 export const ContextProvider = ({ children }: React.PropsWithChildren) => {
-  const [dark, setDark] = React.useState(false);
+  const [nome, setNome] = React.useState('');
 
   return (
-    <Context.Provider value={{ dark, setDark }}>{children}</Context.Provider>
+    <Context.Provider value={{ nome, setNome }}>{children}</Context.Provider>
   );
 };

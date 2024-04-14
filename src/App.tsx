@@ -1,10 +1,15 @@
+import Curriculum from './components/Curriculum/Curriculum';
 import Sidenav from './components/Sidenav/Sidenav';
+import { ContextProvider } from './components/useContent/Context';
 
 function App() {
   return (
-    <div className="container-lg">
-      <Sidenav />
-    </div>
+    <ContextProvider>
+      <div className="container-lg flex">
+        <Sidenav />
+        <Curriculum />
+      </div>
+    </ContextProvider>
   );
 }
 
